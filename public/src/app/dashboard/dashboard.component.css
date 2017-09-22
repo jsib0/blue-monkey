@@ -365,10 +365,8 @@ nav .navwrapper {
 	text-transform: uppercase;
 	letter-spacing: .05em;
 	width: 105%;
-	outline: 1px solid blue;
-	padding: 1px;
 	margin: 0;
-	background-color: white;
+	background-color: #fff;
 	
 }
 
@@ -440,13 +438,14 @@ svg {
 
 .book_section {
 	background-image: url(../../assets/images/reserve.jpg);
-	background-size: cover;
+	background-size: 100% 100%;
+	background-repeat: none;
 }
 
 #book_a_table {
 	position: relative;
 	margin:0 auto;
-	top: 20rem;
+	top: 14.5rem;
 
 }
 
