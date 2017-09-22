@@ -11,9 +11,17 @@ declare var jQuery:any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+
 })
 export class DashboardComponent implements OnInit {
+  lat: number = 9.3104;
+  lng: number = 123.3090;
+  zm: number = 19;
+  bgcolor: string = 'grey';
+  zmctrl: boolean = true;
+  iconHref: string = '#icon-location';
+  iconHHH: string = 'http://www.w3.org/1999/xlink';
 
 
  
@@ -41,20 +49,15 @@ export class DashboardComponent implements OnInit {
   	jQuery('.event').parallax({
   	 positionX: 2,
      positionY: -430,
-     bleed: 50
+     bleed: 100
   	});
 
 
+    
 
-
-  	
-
-
-
-
-
-  	
   }
+    
+
 }
 
 

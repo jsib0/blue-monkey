@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*bootstrap will not work with parallax so only activate if parallax not needed*/
+
+/*@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";*/
