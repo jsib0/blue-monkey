@@ -18,10 +18,7 @@ export class DashboardComponent implements OnInit {
   lat: number = 9.3104;
   lng: number = 123.3090;
   zm: number = 19;
-  bgcolor: string = 'grey';
-  zmctrl: boolean = true;
-  iconHref: string = '#icon-location';
-  iconHHH: string = 'http://www.w3.org/1999/xlink';
+
 
 
  

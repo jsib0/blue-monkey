@@ -3,7 +3,7 @@
 }
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
-/*@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";*/
+
 
 
 html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
@@ -62,7 +62,7 @@ h1 {
 	transform: rotate(-66deg);
 }
 
-h1 span {
+.characters span {
 	position: absolute;
 	height: 28vw;
 	min-width: 1rem;
@@ -331,7 +331,7 @@ nav .navwrapper {
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	z-index: 1;
+	z-index: 0;
 	margin:0;
 }
 
@@ -348,9 +348,149 @@ nav .navwrapper {
 /*/// events ///*/
 
 .event {
-	height: 300px;
+	height: 500px;
 	
 }
+
+h1 {
+	position: relative;
+	font-size: 2.875rem;
+	font-weight: 700;
+	line-height: 1em;
+	padding: 0em 0em;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #fff;
+	/*outline: 3px solid blue;*/
+}
+
+.event_banner {
+	top: 14vh;
+	left: 33.33%;
+	height: 100%;
+	position: relative;
+	width: 10vw;
+	border-radius: 50%;
+	transform: rotate(-42deg);
+	/*outline: 1px solid red;*/
+}
+
+.characters_event span {
+	position: absolute;
+	height: 400px;
+	min-width: 5rem;
+	transform-origin: bottom center;
+	font-family: "bebas-neue", Arial, sans-serif;
+	/*outline: 1px solid purple;*/
+}
+
+.char_a { transform: rotate(0deg); }
+.char_b { transform: rotate(5deg); }
+.char_c { transform: rotate(11deg);}
+.char_d { transform: rotate(16deg); }
+.char_e { transform: rotate(21deg); }
+.char_f { transform: rotate(25deg); }
+.char_g { transform: rotate(29deg); }
+.char_h { transform: rotate(34deg); }
+.char_i { transform: rotate(34deg);  }
+.char_j { transform: rotate(45deg); }
+.char_k { transform: rotate(50deg); }
+.char_l { transform: rotate(45deg); }
+.char_m { transform: rotate(60deg); }
+.char_n { transform: rotate(65deg); }
+.char_o { transform: rotate(70deg); }
+.char_p { transform: rotate(75deg); }
+.char_q { transform: rotate(80deg); }
+.char_r { transform: rotate(85deg); }
+
+/*.container-2 { 
+	background: red; 
+	width: 400px; 
+	height: 400px; position: absolute; z-index: 100;}*/
+
+.container-2 {
+  text-align: center;
+  width: 100%;
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.btn {
+  position: relative;
+  color: white;
+  width: 256px;
+  height: 64px;
+  line-height: 64px;
+  transition: all 0.3s;
+  z-index: 10;
+  bottom: 325px;
+ 
+}
+
+.btn span {
+	
+    transition: all 0.3s;
+    transform: scale(1, 1);
+  
+}
+
+.btn::before, .btn::after {
+  content: '';
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* BTN TWO */
+.btn-two::before, .btn-two::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.3s;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+ 
+
+}
+
+.btn-two:hover::after {
+  animation-name: rotatecw;
+  animation-duration: 2s;
+}
+.btn-two:hover::before {
+  animation-name: rotateccw; 
+  animation-duration: 3s;
+}
+.btn-two:hover::after, .btn-two:hover::before {
+  left: 96px;
+  width: 64px;
+  
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotatecw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotateccw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+
 
 /*/// findus ///*/
 

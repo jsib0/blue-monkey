@@ -21,7 +21,7 @@
       "styles": [
         "styles.css", "../node_modules/jquery/dist/jquery.min.js"
       ],
-      "scripts": ["./node_modules/jquery/dist/jquery.js", "./node_modules/tether/dist/js/tether.js", "./node_modules/boostrap/dist/js/boostrap.js"],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

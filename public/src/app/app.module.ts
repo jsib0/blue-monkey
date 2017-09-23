@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
     routing,
     CommonModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyB01G51e3GTU0-E7QCSUpx081I5BezZ20s"
+      apiKey: "AIzaSyAifWRatmXup7Eli2bx2hnbDSMEaahuAfk"
     })
   ],
   providers: [DashboardService],
