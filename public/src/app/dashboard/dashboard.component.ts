@@ -41,13 +41,13 @@ export class DashboardComponent implements OnInit {
 
   	//fundUs
 
-  	jQuery('.event').parallax({ imageSrc:'../../assets/images/inside.jpg'});
+  	// jQuery('.event').parallax({ imageSrc:'../../assets/images/inside.jpg'});
 
-  	jQuery('.event').parallax({
-  	 positionX: 2,
-     positionY: -430,
-     bleed: 100
-  	});
+  	// jQuery('.event').parallax({
+  	//  positionX: 2,
+   //   positionY: -430,
+   //   bleed: 100
+  	// });
 
 
     
