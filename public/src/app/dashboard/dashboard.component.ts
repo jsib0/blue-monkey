@@ -17,7 +17,24 @@ declare var jQuery:any;
 export class DashboardComponent implements OnInit {
   lat: number = 9.3104;
   lng: number = 123.3090;
-  zm: number = 19;
+  zm: number = 18;
+  scroll: boolean = false;
+  style: any =  [{ "featureType": "road",
+"elementType":
+"labels.icon",
+"stylers": [
+{ "saturation": 1 },
+{ "gamma": 1 },
+{ "visibility": "on" },
+{ "hue": "#e6ff00" }
+]
+},
+{ "elementType": "geometry", "stylers": [
+{ "saturation": -100 }
+]
+}
+];
+  backgroundColor: string = "#eeeeee";
 
 
 
@@ -34,26 +51,28 @@ export class DashboardComponent implements OnInit {
   	jQuery('.parallax-window').parallax({
     positionX: 2,
     positionY: -350,
-    bleed: 50
+    bleed: 100
   
   });
 
 
-  	//fundUs
+    	//fundUs
 
-  	// jQuery('.event').parallax({ imageSrc:'../../assets/images/inside.jpg'});
+    	// jQuery('.event').parallax({ imageSrc:'../../assets/images/inside.jpg'});
 
-  	// jQuery('.event').parallax({
-  	//  positionX: 2,
-   //   positionY: -430,
-   //   bleed: 100
-  	// });
+    	// jQuery('.event').parallax({
+    	//  positionX: 2,
+     //   positionY: -430,
+     //   bleed: 100
+    	// });
 
 
         jQuery("ul").click(function() {
         jQuery('#drawer1').prop('checked', false); // Unchecks it
 
         });
+
+
 
 
 
