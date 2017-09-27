@@ -192,15 +192,28 @@ nav .navwrapper {
     display: flex;
     justify-content: space-between;
 }
+input {
+  display: none; }
 
 /* navbar media query */
 
 @media screen and (max-width:769px) {
+
+	.navbar{
+     position: relative;
+     height: 0;
+  	 min-width: 100%;
+  	 top: 0px;
+  	 z-index: 6;
+    }
+
     nav ul a  {    
          color: #53354A;
+         /*z-index: 30;*/
 
     }
     nav ul {
+      position: relative;
       background-color: black;
       display: block;
       height: 0;
@@ -210,109 +223,108 @@ nav .navwrapper {
       transition: all 1s ease;
       outline: 3px solid black; //not needed
       visibility: visible; // not needed
-      z-index: -1;
+      
       width: 100%;
       padding: 7rem;
+      /*z-index:30;*/
     }
 	
 
-    nav li {
+    nav ul li {
       color: #53354A;
       display: block;
       padding: 0em 0;
+      /*z-index: 30;*/
     }
-    nav #menu-toggle:checked ~ ul {
-      opacity: .8;
-      height: 100vh;
-      width: 100vw;
-      position: fixed;
-      top: 0;
-      left: 0;
-     
 
-    
-    }
-    nav .label-toggle {
-    
-      position: fixed; 
-	  right: 10px;
-	  top: 5vh;
-	  display: block;
-	  width: 45px;
-	  height: 45px;
-	  border-radius: 50%;
-	  border: 2px solid #fff;
-	  cursor: pointer;
-	  z-index: 2;
-
-	    }
-
-    .before,
-	.after {
-	    content: '';
-	    position: absolute;
-	    width: 32px;
-	    height: 2px;
-	    background-color: white;
-	    border-radius: 0;
-	    top: 20px;
-	    -webkit-transition: 150ms ease-out;
-	    -moz-transition: 150ms ease-out;
-	    -o-transition: 150ms ease-out;
-	    transition: 150ms ease-out;
-	    z-index: 0;
-	}
-	.before {
-	    left: 5px;
-	}
-	.after {
-	    -webkit-transform: rotate(-90deg);
-	    -moz-transform: rotate(-90deg);
-	    transform: rotate(-90deg);
-	    right: 4px;
-
-	}
-
-
-	nav .label-toggle:hover {
-		border: 1px solid #717171;
-	    padding-bottom: 1px;
-	}
-
-	nav .label-toggle:hover .before{
-		-ms-transform: rotate(225deg);
-	    -webkit-transform: rotate(225deg);
-	    -moz-transform: rotate(225deg);
-	    transform: rotate(225deg);
-	    -webkit-transition: 300ms ease-in-out all;
-	    -moz-transition: 300ms ease-in-out all;
-	    -o-transition: 300ms ease-in-out all;
-	    transition: 300ms ease-in-out all;
-	}
-
-
-	nav .label-toggle:hover .after{
-		-ms-transform: rotate(-225deg);
-	    -webkit-transform: rotate(-225deg);
-	    -moz-transform: rotate(-225deg);
-	    transform: rotate(-225deg);
-	    -webkit-transition: 250ms ease-in all;
-	    -moz-transition: 250ms ease-in all;
-	    -o-transition: 250ms ease-in all;
-	    transition: 250ms ease-in all;
-	}
-
+ 
 
     nav .navwrapper {display: block;}
 		
-    .navbar {
-     background-color: black;
-     position: relative;
-     height: 0;
-  	 min-width: 100%;
-  	 top: 0px;
-  	 z-index: 1;
-    }
+    
+
+
+
+
+
+	/* start*/
+.toggle-label {
+  display: none;
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 99;
+  color: #5196ce;
+  width: 30px;
+  height: 30px;
+  transition: all 400ms ease-in-out;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; } 
+
+.toggle-label .toggle-icon, .toggle-label .toggle-icon::before, .toggle-label .toggle-icon::after {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  height: 4px;
+  width: 30px;
+  cursor: pointer;
+  background: #5196ce;
+  display: block;
+  content: '';
+  transition: all 500ms ease-in-out; }
+
+.toggle-label .toggle-icon::before {
+  transform: translate3d(0%, -12px, 0); }
+
+.toggle-label .toggle-icon::after {
+  transform: translate3d(0%, 8px, 0); }
+
+.toggle:checked ~ .toggle-label .toggle-icon {
+  background-color: transparent; }
+
+.toggle:checked ~ .toggle-label .toggle-icon::before {
+  transform: translateX(0%) rotate(45deg); }
+
+.toggle:checked ~ .toggle-label .toggle-icon::after {
+  transform: translateX(0%) translateY(-8px) rotate(-45deg);
+  top: 10px; }
+
+ .toggle:checked ~ ul {
+      opacity: .7;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 30;
+      transition-property: opacity;
+      transition-duration: 500ms;
+      transition-delay: 200ms;
+      transition-timing-function: ease-in-out;
+}
+
+ul:focus ~ body{
+	visibility: visible;
+
+}
+
+/*.toggle:not(:checked) ~ #overlay {
+  transition-property: opacity;
+  transition-duration: 500ms;
+  transition-delay: 500ms;
+  transition-timing-function: ease-in-out; }*/
+
+
+   
+
+
+
+
+
+	/*end */
+
   
 }
 
@@ -345,11 +357,15 @@ nav .navwrapper {
 
 .event {
 	height: 500px;
-	background-image: url('../../assets/images/reserve.jpg');
+
+	background: linear-gradient(
+                     rgba(20,20,20, .5), 
+                     rgba(20,20,20, .5)),url('../../assets/images/reserve.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	
 }
+
 
 h1 {
 	position: relative;
@@ -420,7 +436,7 @@ h1 {
   height: 64px;
   line-height: 64px;
   transition: all 0.3s;
-  z-index: 2;
+  z-index: 1;
   top: 30vh;
  
 }
@@ -434,7 +450,7 @@ h1 {
     transition: all 0.3s;
     font-color: #fff;
     transform: scale(1, 1);
-    z-index: 10;
+    z-index: 2;
   
 }
 
@@ -446,7 +462,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* BTN TWO */
@@ -457,7 +473,6 @@ h1 {
   height: 100%;
   bottom: 0;
   left: 0;
-  /*z-index: 1;*/
   transition: all 0.3s;
   border: 3px solid rgba(255, 255, 255, 0.5);
  
@@ -496,7 +511,7 @@ h1 {
 	position: relative;
 	font-family: 'cardo', Arial, sans-serif;
 	font-size: 1.15rem;
-	z-index: 2;
+	z-index: 0;
 	text-align: center;
 	top: 35vh;
 	color: #fff;
@@ -537,6 +552,7 @@ agm-map {
 
 .column-details{
 	align-items: center;
+	
 }
 
 
@@ -559,6 +575,7 @@ agm-map {
 	top: 2px;
 	margin-left: 3px;
 	border-bottom:2px solid #98A1A4;
+
 }
 
 .contact-list {
@@ -568,6 +585,7 @@ agm-map {
 	text-decoration: none;
 	margin: auto;
 	
+	
 }
 
 .contact-list li {
@@ -576,6 +594,7 @@ agm-map {
 	width: 100%;
 	list-style-type: none;
 	margin-top: 2em;
+	
 	
 
 }
@@ -679,8 +698,7 @@ figure span:nth-child(2){
 	}
 	
 	.column-details{
-		outline: 1px solid black;
-		z-index: 10;
+		z-index: 5;
 	}
 
 	.column-details h1 {
@@ -695,8 +713,9 @@ figure span:nth-child(2){
 	.contact-list {
 		position: relative;
 		top: 2rem;
-		width: 35%;
+		width: 40%;
 		padding: 0;
+		right: 10vw;
 		margin: 0 auto;
 	}
 
@@ -704,7 +723,7 @@ figure span:nth-child(2){
 		position: relative;
 		font-size: 1em;
 		margin-top: 1em;
-		width: 250%;
+		width: 190%;
 	}
 
 	figure span {

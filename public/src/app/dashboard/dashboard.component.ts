@@ -50,10 +50,19 @@ export class DashboardComponent implements OnInit {
   	// });
 
 
-    
+        jQuery("ul").click(function() {
+        jQuery('#drawer1').prop('checked', false); // Unchecks it
 
-  }
-    
+        });
+
+
+
+
+      
+          
+    }
+
+
 
 }
 
