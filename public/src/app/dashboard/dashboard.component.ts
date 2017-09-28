@@ -51,6 +51,7 @@ export class DashboardComponent implements OnInit {
   	jQuery('.parallax-window').parallax({
     positionX: 2,
     positionY: -350,
+    left: -5,
     bleed: 100
   
   });
