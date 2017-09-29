@@ -779,8 +779,7 @@ figure span:nth-child(2){
 @media only screen and (max-width: 430px){
 	
 	.contact-list li {
-		margin-left: 16%;
-		padding-left: 0;
+		margin-left: 0;
 	}
 
 	h1 {
@@ -790,8 +789,8 @@ figure span:nth-child(2){
 
 	.event_banner {
 		top: 30%;
-		left: -3vw;
-		-webkit-left: -3vw;
+		left: -12vw;
+		-webkit-left: -12vw;
 		width: 10px;
 	
 	}
