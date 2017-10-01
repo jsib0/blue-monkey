@@ -44,7 +44,7 @@ section {
 }
 
 .characters span {
-	position: relative;
+	/*position: relative;*/
 	font-size: 4vw;
 	font-weight: 700;
 	line-height: 1em;
@@ -53,6 +53,10 @@ section {
 	text-transform: uppercase;
 	font-family: 'Open Sans Condensed', sans-serif;
 	color: #FFFFFF;
+	position: absolute;
+	height: 35vw;
+	min-width: 2rem;
+	transform-origin: bottom center;
 }
 
 .logo {
@@ -65,12 +69,7 @@ section {
 	transform: rotate(-64deg);
 }
 
-.characters span {
-	position: absolute;
-	height: 35vw;
-	min-width: 2rem;
-	transform-origin: bottom center;
-}
+
 
 .char1 { transform: rotate(0deg); }
 .char2 { transform: rotate(8deg); }
@@ -379,6 +378,7 @@ h1 {
 	width: 10px;
 	border-radius: 50%;
 	transform: rotate(-41deg);
+	outline: 1px solid red;
 }
 
 .characters_event span {
@@ -773,6 +773,65 @@ figure span:nth-child(2){
 }
 
 
+
+
+
+
+@media only screen and (max-width: 749px){
+	
+	.head { min-height: 100vh;
+			background-image: url(../../assets/rsz_1blue_monkey.jpg);
+	}
+
+	.characters {
+		height: 30%;
+		
+	}
+	.characters span {
+		font-size: 1.6rem;
+		font-size: 2rem;
+		height: 45vw;
+	}
+
+	
+
+
+	.logo {
+		left: 8vw;
+		width: 1vw;
+	}
+
+	.event_banner {
+		top: 30vh;
+		left: 12vw;
+		-webkit-left: 1vw;
+		width: 1vw;
+		
+	
+	}
+
+	.characters_event {
+		line-height: 10vw;
+	}
+
+	.characters_event span {
+		height: 55vw;
+		min-height: 280px;
+		min-width: 1.5rem;
+		transform-origin: 50% 100%;
+		font-size: 2rem;
+		outline: 1px solid red;
+	}
+
+}
+@media only screen and (max-width: 510px) {
+	.event_banner {
+		left: 7vw;
+		-webkit-left: 10vw;
+	}
+}
+
+
 @media only screen and (max-width: 430px){
 	
 	.contact-list li {
@@ -802,14 +861,20 @@ figure span:nth-child(2){
 		min-width: 2.5rem;
 		transform-origin: bottom center;
 	}
+
+
+	.characters span {
+		font-size: 7.5vw;
+		height: 50vw;
+	}
+
+	.logo {
+		left: 2.5vw;
+	}
+
+
 }
 
-
-
-@media only screen and (max-width: 749px){
-	
-	.head { min-height: 100vh;}	
-}
 
 
 /* media queries */
