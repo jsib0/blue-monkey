@@ -36,6 +36,7 @@
 	height: 100%;
 	padding: 10px;
 	top: 3rem;
+	outline: 4px solid red;
 	
 	
 
@@ -49,6 +50,7 @@
 	text-align: center;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	
 }
 
 .rm-wrapper .rm-cover {
