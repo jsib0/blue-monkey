@@ -29,10 +29,17 @@
 	perspective: 1600px;
 	color: #2a323f;
 	left: 33.33%;
+	/*top: 8%;*/
+
+	/* added*/
+	
 	height: 100%;
 	padding: 10px;
 	top: 3rem;
 	outline: 4px solid red;
+	
+	
+
 }
 
 .rm-wrapper,
@@ -43,14 +50,19 @@
 	text-align: center;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	
 }
 
 .rm-wrapper .rm-cover {
+
 	-webkit-transform-origin: 0% 50%;
 	-webkit-transition-delay: 0.2s;
 	transform-origin: 0% 50%;
 	transition-delay: 0.2s;
+
 }
+
+
 
 .rm-wrapper .rm-middle {
 	/*
@@ -59,6 +71,7 @@
 }
 
 .rm-wrapper .rm-right {
+	
 	-webkit-transform-origin: 100% 50%;
 	-webkit-transition-delay: 0s;
 	transform-origin: 100% 50%;
@@ -84,6 +97,9 @@
 		inset 0 0 0 19px #e6b741, 
 		inset 0 0 0 20px #fff, 
 		inset 0 0 0 21px #e6b741;
+ 
+
+
 }
 
 /*.rm-container .rm-front,
@@ -126,6 +142,7 @@
 	outline: 1px solid blue;
 
 }
+
 
 .rm-content h2,
 .rm-content h4,
@@ -527,14 +544,19 @@ a.rm-button-open,
 
 @media screen and (max-width: 960px) {
 	.main {
+
 		overflow: scroll;
 		height: 100%;
-	}
+	
 
+
+		
+		
+
+	}
 	.main::-webkit-scrollbar { 
     display: none; 
-	}	
-
+}
 	.rm-container {
 
 		width: 100%;
@@ -542,19 +564,28 @@ a.rm-button-open,
 		max-width: 460px;
 		-webkit-perspective: 0px;
 		perspective: 0px;
+
+		/*added */
 		margin: 0 auto;
 		position: relative;
 		left: 0;
-	}
+		
+		/*overflow: scroll;*/
 
+	}
 	.rm-wrapper, 
 	.rm-wrapper > div,
 	.rm-wrapper > div > div {
 		position: relative;
 		width: 100%;
 		height: auto;
+
+		/*add*/
 		left: 6vw;
-		top:0px;		
+		top:0px;
+		/*overflow: scroll;*/
+
+		
 	}
 
 	.rm-wrapper > div > div{
@@ -589,6 +620,7 @@ a.rm-button-open,
 		pointer-events: none;
 	}
 
+
 	.rm-button-open:after {
 		content: '\2193';
 	}
@@ -622,16 +654,27 @@ a.rm-button-open,
 		position: relative;
 		width: 100%;
 		height: auto;
+
+		/*add*/
 		left: 0;
+	
+
+		
 	}
 
 	.main {
+
 		overflow: scroll;
 		height: 100%;
-	}
+		
 
+
+		
+		
+
+	}
 	.main::-webkit-scrollbar { 
     display: none; 
-	}
+}
 
 }

@@ -37,16 +37,13 @@ export class DashboardComponent implements OnInit {
   backgroundColor: string = "#eeeeee";
 
 
-
- 
   constructor( private elRef: ElementRef, private window: DashboardService) {
   	
    }
 
   ngOnInit() {
   	// burgers 
-  	jQuery('.parallax-window').parallax({imageSrc: '../../assets/burgers.jpg'});
-
+  	jQuery('.parallax-window').parallax({imageSrc: '../../assets/images/burgers.jpg'});
 
   	jQuery('.parallax-window').parallax({
     positionX: 2,
@@ -56,34 +53,11 @@ export class DashboardComponent implements OnInit {
   
   });
 
+    jQuery("ul").click(function() {
+    jQuery('#drawer1').prop('checked', false); // Unchecks it
 
-    	//fundUs
-
-    	// jQuery('.event').parallax({ imageSrc:'../../assets/images/inside.jpg'});
-
-    	// jQuery('.event').parallax({
-    	//  positionX: 2,
-     //   positionY: -430,
-     //   bleed: 100
-    	// });
-
-
-        jQuery("ul").click(function() {
-        jQuery('#drawer1').prop('checked', false); // Unchecks it
-
-        });
-
-
-
-
-
-
-      
-          
-    }
-
-
-
+  });      
+  }
 }
 
 
