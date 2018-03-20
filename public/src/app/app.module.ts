@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NavbarComponent } from './dashboard/navbar/navbar.component';
+import * as $ from 'jquery';
 
 import { routing } from './app.routes';
 import { DashboardService } from './dashboard/dashboard.service';
@@ -21,7 +21,6 @@ import { CommonModule } from '@angular/common';
   declarations: [
     AppComponent,
     DashboardComponent,
-    NavbarComponent
   ],
   imports: [
     BrowserModule,
