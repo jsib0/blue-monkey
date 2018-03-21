@@ -47,6 +47,13 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
 
     $(document).ready(function(){
+
+      $('#home_bar').click(function() {
+          $('html, body').animate({
+            scrollTop: $('#home').offset().top
+          }, 1000);
+       })
+
        $('#menu_bar').click(function() {
           $('html, body').animate({
             scrollTop: $('#menu').offset().top
